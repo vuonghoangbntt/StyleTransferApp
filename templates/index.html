@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>File Upload</title>
+  </head>
+  <body>
+    <h1>File Upload</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><span>Content file: </span><input type="file" name="content" required></p>
+      <p><span>Style file: </span><input type="file" name="style" required></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+    {% if apply%}
+      <h1>Results</h1>
+      <table>
+        <tr>
+          <th>Content</th>
+          <th>Style</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td><img src="{{ url_for('static', filename='uploads/'+content_file) }}" style="width:400px;height:500px;"></td>
+          <td><img src="{{ url_for('static', filename='uploads/'+style_file) }}" style="width:400px;height:500px;"></td>
+          <td><img src="{{ url_for('static', filename='results/'+result_file) }}" style="width:400px;height:500px;"></td>
+        </tr>
+      </table>
+    {%endif%}
+  </body>
+</html>

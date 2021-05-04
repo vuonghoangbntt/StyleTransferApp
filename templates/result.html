@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <title>File Upload</title>
+  </head>
+  <body>
+    <h1>Results</h1>
+    <img src="{{ url_for('static', filename='uploads/'+content_file) }}" style="width:400px;height:500px;">
+    <img src="{{ url_for('static', filename='uploads/'+style_file) }}" style="width:400px;height:500px;">
+    <img src="{{ url_for('static', filename='results/'+result_file) }}" style="width:400px;height:500px;">
+  </body>
+</html>
